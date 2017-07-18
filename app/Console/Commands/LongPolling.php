@@ -41,7 +41,7 @@ class LongPolling extends Command
         $worker = \App::make("PollingWorker");
         $worker->run();
 
-        $this->comment("bootstrap done <3");
+        $this->comment("PollingWorker is running... <3");
 
     }
 }

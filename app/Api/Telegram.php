@@ -1,7 +1,7 @@
 <?php
 namespace App\Api;
 
-class TelegramApi{
+class Telegram{
 
     protected $bot_token;
     protected $bot_url;
@@ -23,6 +23,14 @@ class TelegramApi{
         //依 bot 基本設定資料去建構 curl query 的 url
         $this->bot_url = $this->bot_url.$this->bot_token."/";
 
+    }
+
+    //測試印出設定
+    function dump_config()
+    {
+        echo "config dump:\n";
+        var_dump($this->bot_token);
+        var_dump($this->bot_url);
     }
 
     function sendMsg($chat_id, $msg)
