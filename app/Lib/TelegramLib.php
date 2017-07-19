@@ -50,8 +50,12 @@ class TelegramLib
         echo "-------------------------------\n";
         echo "update id = " . $msg['update_id'] . "\n";
         echo "user_id   = " . $msg['message']['chat']['id'] . "\n";
-        echo "username  = " . $msg['message']['chat']['username'] . "\n";
-        echo "msg       = " . $msg['message']['text'] . "\n";
+	echo "username  = " . $msg['message']['chat']['username'] . "\n";
+	//防止沒有文字的狀況
+	if(!empty($msg['message']['text']))
+	    echo "msg       = " . $msg['message']['text'] . "\n";
+	else
+            $msg['message']['text'] = "(null)";
         echo "-------------------------------\n";
 
         //處理這則訊息 (回應使用者, 不回應使用者... or 其他可指定的動作)
