@@ -1,0 +1,8 @@
+<?php
+
+//Telegram API config example
+
+return [
+    'token' => 'YOUR_BOT_TOKEN',
+    'url' => 'https://api.telegram.org/bot'
+];
