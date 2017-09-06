@@ -11,14 +11,14 @@ class LongPolling extends Command
      *
      * @var string
      */
-    protected $signature = 'longpolling';
+    protected $signature = 'listen:longpolling';
 
     /**
      * The console command description.
      *
      * @var string
      */
-    protected $description = 'Start Long Polling';
+    protected $description = '開始監聽 (採取 Long Polling 方式)';
 
     /**
      * Create a new command instance.
